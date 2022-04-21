@@ -16,4 +16,4 @@ Ford-Fulkerson 알고리즘에 대한 레포트이다. C 언어를 이용하여 구현했으며, 인터넷 
 
 - 두 정점 S, T가 존재하는 그래프가 있다. S 는 source의 약자로 유량을 발생시키는 정점, T는 최종 목적지이며 최대 유량을 구하는 정점이다. 정점 S, T 사이에는 특정 개수의 정점이 존재하며 이 값은 입력받는다. S, T를 제외한 나머지 정점은 각각 용량 C(capacity), 유량 F(flow)를 가진다. 아래 그래프를 알고리즘을 이용하여 구현하시오.
 
- <p align="center"><img src="" height="250px" width="350px"></p>
+ <p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/1.png" height="250px" width="350px"></p>
