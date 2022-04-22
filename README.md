@@ -132,7 +132,7 @@ S → b → T 인 경우
 
 <br/>
 
-<p align="center"><img src="5" height="250px" width="350px"></p>
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/5.png?raw=true" height="250px" width="350px"></p>
 
 <br/>
 
@@ -151,7 +151,7 @@ S → b → T 인 경우
 
 <br/>
 
-<p align="center"><img src="6" height="250px" width="350px"></p>
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/6.png?raw=true" height="250px" width="350px"></p>
  
 → 위에서 구한 방식으로 최대 유량을 구하면
 
