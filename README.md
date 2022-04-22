@@ -45,10 +45,8 @@
   아래 그래프를 Ford-Fulkerson 알고리즘을 이용하여 구현해보고자 한다.
 
    <br/>  
-   <br/>
   <p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/1.png?raw=true" height="250px" width="350px"></p>
 
- <br/>
  <br/>
 
 ## 알고리즘 분석
@@ -191,7 +189,7 @@ S → a → T, S → b → T 를 먼저 탐색하는 경우보다 유량이 적음에도 불구하고 탐색
 
 <br/>
 
-<p align="center"><img src="7" height="200px" width="300px"></p>
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/7.png?raw=true" height="200px" width="300px"></p>
 
 <br/>
 
@@ -217,3 +215,10 @@ S → a → T, S → b → T 를 먼저 탐색하는 경우보다 유량이 적음에도 불구하고 탐색
 임의의 두 정점을 잇는 간선에서의 잔여유량 = 최대용량 - 현재흐르는 유량을 의미
 
 > r(a,b) = c(a,b) - f(a,b) 가 성립
+
+<br/>
+
+- **유량상쇄**
+
+Ford-Fulkerson 알고리즘 이해에 있어서 가장 중요한 부분이다.  
+ 위 다른 경우 에서, S A B T 그래프 예를 들면서 ~~ 설명 하고 사진도 하나 넣고 알고리즘 소스 구현
