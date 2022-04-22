@@ -41,15 +41,12 @@
    <br/>  
   <p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/1.png?raw=true" height="250px" width="350px"></p>
 
- <br/>
-
 ## 알고리즘 분석
 
 - 각 간선의 용량을 그래프에 나타나면 다음과 같다.
 
 <p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/2.png?raw=true" height="250px" width="350px"></p>
 
-<br/>
 <br/>
 
 a → b 간선의 유량은 b → a 형태로도 흐를 수 있다.
