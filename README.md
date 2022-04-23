@@ -235,11 +235,11 @@ S → a → b → T, S → b → a → T 로 유량을 흘려 보낼때, 겹치는 정점의 노드인 a
 
 이때 f(a,b)와 f(b,a)는 반대 방향으로 유량이 흐른다. 즉 f(a,b) = -f(b,a) 를 만족하고 이것을 더해 상쇄시켜 0으로 간주한다.
 
-결국 처음에 S → a → T, S → b → T 를 각각 탐색 후 T에 도착하는 용량, 즉 최대용량를 구하는 식과 같은 꼴이 된다. 아래에 그래프에 설명되어 있다.
+결국 처음에 S → a → T, S → b → T 를 각각 탐색 후 T에 도착하는 용량, 즉 최대용량를 구하는 탐색경로와 같은 꼴이 된다. 아래에 그래프에 설명되어 있다.
 
 <br/>
 
-<p align="center"><img src="8" height="270px" width="370px"></p>
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/8.png?raw=true" height="270px" width="370px"></p>
 
 <br/>
 
