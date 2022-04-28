@@ -374,3 +374,9 @@ int main() {
 	std::cout << FordFulkerson(1, 4); // 출력
 }
 ```
+
+## 알고리즘 실행 결과
+
+<br/>
+ 
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/9.png?raw=true" height="550px" width="700px"></p>
