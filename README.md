@@ -404,11 +404,13 @@ f값에 따라 시간복잡도가 결정 되므로, f 값이 크면 최악의 상황이 발생한다.
 
 <br/>
 
-<p align="center"><img src="10" height="250px" width="350px"></p>
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/10.png?raw=true" height="250px" width="350px"></p>
 
 <br/>
 
-결론부터 얘기하자만 1의 유량을 보내는것을 10000번 반복한다.
+> 결과: 1의 유량을 보내는것을 10000번 반복한다.
+
+<br/>
 
 S → a → b → T으로 1의 유량, S → b → a → T로 1의 유량을 보내게 되는데, a → b b → a유량은 역방향 유량이므로 초기화 된다.
 
@@ -416,7 +418,7 @@ S → a → b → T으로 1의 유량, S → b → a → T로 1의 유량을 보내게 되는데, a →
 
 이것이 DFS탐색을 이용한 이 알고리즘의 단점이다.
 
-유량값이 클 수록, 하지 않아도 될 탐색을 수행한다.
+- 최대유량값이 클 수록, 하지 않아도 될 탐색을 수행한다.
 
 ---
 
