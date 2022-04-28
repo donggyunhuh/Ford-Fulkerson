@@ -218,7 +218,7 @@ S → a → T, S → b → T 를 먼저 탐색하는 경우보다 유량이 적음에도 불구하고 탐색
 - **유량상쇄**
 
 Ford-Fulkerson 알고리즘 이해에 있어서 가장 중요한 부분이다.  
- 위 용량이 다른 경우를 예시로 들어 설명 하겠다.
+ 위 용량이 다른 경우를 예시로 들어 설명하겠다.
 <br/>
 
 <p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/6.png?raw=true" height="250px" width="350px"></p>
@@ -278,3 +278,34 @@ Ford-Fulkerson 알고리즘 탐색과정을 크게 4 단계로 나누어 보았다.
 <br/>
 
 # 알고리즘 소스 구현
+
+<br/>
+
+<p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/6.png?raw=true" height="250px" width="350px"></p>
+
+<br/>
+
+위 그래프를 구현하여 보겠다.
+
+편의상 S를 1, a를 2, b를 3, T를 4라고 지정한다.
+
+<br/>
+그래프 입력
+
+```c++
+#include <bits/stdc++.h>   // 헤더파일 모음
+
+constexpr int MAX = 10 + 1;
+constexpr int INF = 999999999;
+
+std::vector<int> adj[MAX];
+int c[MAX][MAX], f[MAX][MAX];
+
+void makeGraph(int a, int b, int cost) { //그래프를 입력
+	adj[a].push_back(b);
+	adj[b].push_back(a);
+	c[a][b] = cost;
+	c[b][a] = 0;
+}
+
+```
