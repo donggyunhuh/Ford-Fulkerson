@@ -290,7 +290,7 @@ Ford-Fulkerson 알고리즘 탐색과정을 크게 4 단계로 나누어 보았다.
 편의상 S를 1, a를 2, b를 3, T를 4라고 지정한다.
 
 <br/>
-그래프 입력
+그래프 입력 부분
 
 ```c++
 #include <bits/stdc++.h>   // 헤더파일 모음
@@ -308,4 +308,69 @@ void makeGraph(int a, int b, int cost) { //그래프를 입력
 	c[b][a] = 0;
 }
 
+```
+
+<br/>
+
+메인 함수 구현
+
+```c++
+int FordFulkerson(int start, int end) { // 시작 노드, 도착 노드 입력 (S, T)
+	int result = 0;
+
+	while (true) { // queue 를 이용하여 노드 탐색 후 queue에 저장
+		std::vector<int> dist(MAX, -1);
+		std::queue<int> q;
+		q.push(start);
+
+		while (!q.empty()) {
+			int current = q.front();
+			q.pop();
+
+			for (int i = 0; i < adj[current].size(); ++i) {
+				int next = adj[current][i];
+
+				if (c[current][next] - f[current][next] > 0 && dist[next] == -1) {
+					dist[next] = current;
+					q.push(next);
+					if (next == end)
+						break;
+				}
+			}
+		}
+
+		if (dist[end] == -1)
+			break;
+
+		int flow = INF;
+		for (int i = end; i != start; i = dist[i])
+			flow = std::min(flow, c[dist[i]][i] - f[dist[i]][i]);
+
+		for (int i = end; i != start; i = dist[i]) {
+			f[dist[i]][i] += flow;
+			f[i][dist[i]] -= flow;
+		}
+
+		result += flow;
+	}
+
+	return result;
+}
+```
+
+<br/>
+
+출력 부분
+
+```c++
+int main() {
+	makeGraph(1, 2, 2);
+	makeGraph(1, 3, 2);
+	makeGraph(2, 4, 3);
+	makeGraph(3, 4, 1);
+	makeGraph(2, 3, 2);
+
+
+	std::cout << FordFulkerson(1, 4); // 출력
+}
 ```
