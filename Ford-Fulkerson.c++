@@ -21,7 +21,7 @@ int FordFulkerson(int start, int end)
     { // queue 를 이용하여 정점 탐색
         std::vector<int> dist(MAX, -1);
         std::queue<int> q;
-        q.push(start);
+        q.push(start); // 첫번째 정점
 
         while (!q.empty())
         {
@@ -32,11 +32,11 @@ int FordFulkerson(int start, int end)
             {
                 int next = adj[current][i];
 
-                if (c[current][next] - f[current][next] > 0 && dist[next] == -1)
+                if (c[current][next] - f[current][next] > 0 && dist[next] == -1) //잔여 유량이 있는 경우
                 {
-                    dist[next] = current;
+                    dist[next] = current; // queue에 다음 정점 넣음
                     q.push(next);
-                    if (next == end)
+                    if (next == end) // 다 탐색 할 때 까지
                         break;
                 }
             }
@@ -51,8 +51,8 @@ int FordFulkerson(int start, int end)
 
         for (int i = end; i != start; i = dist[i])
         {
-            f[dist[i]][i] += flow;
-            f[i][dist[i]] -= flow;
+            f[dist[i]][i] += flow; //정방향 + 유량
+            f[i][dist[i]] -= flow; //역방향 - 유량
         }
 
         result += flow;
