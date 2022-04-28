@@ -14,11 +14,13 @@
 
 - Ford-Fulkerson 알고리즘에 대한 레포트이다.
 
-  C++ 언어를 이용하여 구현했으며, 인터넷 검색과 관련 교재를 통해 공부하고 최대한 스스로 구현해보고자 하였다.
+  c언어로 구현하려 했으나, 더 간단한 C++ 언어를 이용하여 구현했으며, 인터넷 검색과 관련 교재를 통해 공부하고 최대한 스스로 구현해보고자 노력하였다.
 
   알고리즘 이해 후 모두가 이해하기 쉬운 내 눈높이에서 설명될 수 있도록 노력했다.
 
-  모든 그림 자료는 직접 제작한 자료이다.
+  코드 구현부분은 다른사람의 코드를 참고 한 것이다.
+
+  알고리즘 분석 부분의 모든 그림 자료는 직접 제작한 자료이다.
 
   레포트는 개요, 문제, 알고리즘 분석, 소스 구현, 알고리즘 성능 분석의 구성을 가진다.
 
@@ -301,7 +303,7 @@ constexpr int INF = 999999999;
 std::vector<int> adj[MAX];
 int c[MAX][MAX], f[MAX][MAX];
 
-void makeGraph(int a, int b, int cost) { //그래프를 입력
+void makeGraph(int a, int b, int cost) { //그래프를 입력 후 배열로 저장
 	adj[a].push_back(b);
 	adj[b].push_back(a);
 	c[a][b] = cost;
@@ -315,10 +317,10 @@ void makeGraph(int a, int b, int cost) { //그래프를 입력
 메인 함수 구현
 
 ```c++
-int FordFulkerson(int start, int end) { // 시작 노드, 도착 노드 입력 (S, T)
+int FordFulkerson(int start, int end) { // 시작 정점, 도착 정점 입력 (S, T)
 	int result = 0;
 
-	while (true) { // queue 를 이용하여 노드 탐색 후 queue에 저장
+	while (true) { // queue 를 이용하여 정점 탐색
 		std::vector<int> dist(MAX, -1);
 		std::queue<int> q;
 		q.push(start);
@@ -377,6 +379,21 @@ int main() {
 
 ## 알고리즘 실행 결과
 
+위에서 구한 3의 결과가 출력됨!
+
 <br/>
  
 <p align="center"><img src="https://github.com/donggyunhuh/Ford-Fulkerson/blob/master/9.png?raw=true" height="550px" width="700px"></p>
+개발환경 - 윈도우 11, 온라인 repl.it c++ 17 기반
+
+# 알고리즘 분석
+
+Queue 를 사용했으므로 시간복잡도는 O(1) 의 상수시간이 소요된다.
+
+---
+
+<br/>
+
+### 참고
+
+안경잡이 개발자(https://m.blog.naver.com/ndb796/221237111220)
