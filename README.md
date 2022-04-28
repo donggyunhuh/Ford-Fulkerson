@@ -305,10 +305,10 @@ constexpr int INF = 999999999;
 std::vector<int> adj[MAX];
 int c[MAX][MAX], f[MAX][MAX];
 
-void makeGraph(int a, int b, int cost) { //그래프를 입력 후 배열로 저장
+void makeGraph(int a, int b, int capacity) { //그래프를 입력 후 배열로 저장
 	adj[a].push_back(b);
 	adj[b].push_back(a);
-	c[a][b] = cost;
+	c[a][b] = capacity;
 	c[b][a] = 0;
 }
 
